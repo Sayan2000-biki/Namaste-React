@@ -1,0 +1,31 @@
+{
+  "name": "namaste_react",
+  "version": "1.0.0",
+  "description": "This is the first lecture",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sayan2000-biki/Namaste-React.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "sayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sayan2000-biki/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/Sayan2000-biki/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+}

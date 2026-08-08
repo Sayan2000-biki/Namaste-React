@@ -4,18 +4,37 @@
  *          <h1>I am h1 tag</h1>    
  *          <h2> I am h2 Tag </h2> 
  *      </div>
+ *        <div id="child2">
+ *          <h1>I am h1 tag</h1>    
+ *          <h2> I am h2 Tag </h2> 
+ *      </div>
  * </div>
  * 
  */
 
 
-const heading = React.createElement("h1",
-    { id: "heading", xyz: "abc" },
-    "Hello World From React!"
-); // This is the core react functionality and react.development.js src is resposible for this.
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-//creating root
-const root = ReactDOM.createRoot(document.getElementById("root")); //Reactdom.developmentjs src is resposible for this.
 
-//rendering in root
-root.render(heading);
+const parent = React.createElement("div", { id: "parent" },
+    [
+        React.createElement("div", { id: "child" },
+            [
+                React.createElement("h1", { id: "heading" }, "Hey i am heading inside my parent"),
+                React.createElement("h2", { id: "heading" }, "I am h2 Tag")
+            ]
+        ),
+
+
+        React.createElement("div", { id: "child2" },
+            [
+                React.createElement("h1", { id: "heading" }, "Hey i am heading inside my parent"),
+                React.createElement("h2", { id: "heading" }, "I am h2 Tag")
+            ]
+        ),
+    ]
+);
+
+const root = createRoot(document.getElementById("root"));
+root.render(parent);
